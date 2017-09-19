@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="reservas_styles.css">
+	<title>RESERVAS</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body onload="getReserva();">
+	<div id="dmain">
+		<div id="dtop">
+			<p id = "top_title">Reserva Exitosa</p>
+		</div>
+		<div id="dbottom">
+			Su numero de reserva es:
+			<p id="num_res">num<p/>
+			<input type="button" value="Nueva Reserva?" id="btn3" onClick="backReservas();"/>	
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		function getReserva()
+			{
+				var currentLocation = String(window.location);
+				var ar_sub_host = currentLocation.split("?");
+				var urlvar = ar_sub_host[1];
+				var ar_urlvar = urlvar.split("&");
+				if(ar_urlvar.length>0){
+					console.log(ar_urlvar[0]);
+					var x;
+					for(x in ar_urlvar)
+					{
+						console.log(ar_urlvar[x]);
+						var ar_params = ar_urlvar[x].split("=");
+						if (ar_params[0] == "reserva")
+						{
+							var num_reserva = ar_params[1];
+							$("#num_res").html(num_reserva);
+						}
+					}
+				}
+				else
+				{
+					alert("No hay paramtros en url.")
+				}
+			}
+		
+		function backReservas()
+		{
+			var currentLocation = String(window.location);
+			var ar_sub_host = currentLocation.split("?");
+			var sub_host1 = ar_sub_host[0];
+			//alert(sub_host1);
+			var l =parseInt(sub_host1.length)-19;
+			var host = sub_host1.substr(0,l);
+			
+			window.location = host +'/form_reservas.html';
+		}
+	</script>
+</body>
+</html>

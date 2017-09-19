@@ -1,0 +1,69 @@
+@import url(http://fonts.googleapis.com/css?family=Fauna+One|Muli);
+/*form reservas*/
+body {
+    background-color: rgb(43,34,35);
+    font-family: 'Fauna One', serif;
+}
+input,select{
+	width: 200px;
+}
+#btn1,#btn2,#btn3{
+	margin-top: 20px;
+	width: 150px;
+	text-align: center;
+}
+#dtitle{
+	background-color: rgb(143,134,135);
+	padding: 10px;
+	width: 300px;
+	height: 40px;
+	color: white;
+	font-size: 140%;
+}
+#form1{
+	background-color: rgb(199,173,157);
+	text-align:right;
+	width: 250px;
+	padding: 10px;
+	margin-left: 50px;
+}
+#resultado{
+	background-color: rgb(300,200,100);
+	text-align:center;
+	width: 200px;
+	padding: 10px;
+	margin-left: 100px;
+}
+#costo{
+	font-size: 150%;
+	padding: 10px;
+}
+
+/*web_reservado*/
+#dmain{
+	text-align:center;
+	width: 150px;
+	padding: 10px;
+	margin-left: 100px;
+}
+
+#dtop{
+	background-color: rgb(143,134,135);
+	padding: 10px;
+	width: 300px;
+	height: 50px;
+	color: white;
+	font-size: 130%;
+}
+
+#dbottom{
+	background-color: rgb(199,173,157);
+	padding-top: 30px;
+	padding-right: 10px;
+	padding-left: 10px;
+	width: 300px;
+	height: 250px;
+}
+#num_res{
+	font-size: 40px;
+}

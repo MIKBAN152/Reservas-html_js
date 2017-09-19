@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="reservas_styles.css">
+	<title>RESERVAS</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="jscript.js"></script>
+</head>
+<body>
+	<div id="dmain">
+		<div id="dtitle">Formulario de Reservas</div>
+		<div id="form1">
+			NOMBRE:<br/>
+			<input type="text" id="nombre" />
+			<br/>
+			<br/>
+			CELULAR:<br/>
+			<input type="text" id="nmrid" />
+			<br/>
+			<br/>
+			# PERSONAS:<br/>
+			<select id="sel_cant_pers" onChange="setList();">
+				<option>0</option>
+		  		<option>1</option>
+		  		<option>2</option>
+		  		<option>3</option>
+			</select>
+			<br/>
+			<br/>
+			# DIAS:<br/>
+			<input type="text" id="cant_dias" />
+			<br/>
+			<br/>
+			HABITACION(ES):<br/>
+			<select id="sel_tipo_hab">
+				<option># Habitaciones:</option>
+			</select>
+			<br/>
+			<br/>
+			CHECK IN:<br/>
+			<input type="date" id="fecha_in" />
+			<br/>
+			<input type="button" id="btn1" value="COTIZAR" onClick="postCotizar();"/> 
+		</div>
+		<div id="resultado">
+			<form>
+				VALOR($):
+				<div id="costo">0</div>
+				<input type="button" id="btn2" value="RESERVAR" disabled="true" onClick="postReserva();">
+			</form>
+		</div>
+	</div>
+</body>
+</html>
